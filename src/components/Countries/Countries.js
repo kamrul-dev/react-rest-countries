@@ -4,7 +4,7 @@ import './Countries.css'
 
 const Countries = () => {
     const [countries, setCountries] = useState([]);
-    console.log(countries);
+    // console.log(countries);
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/all')
             .then(res => res.json())
@@ -15,7 +15,10 @@ const Countries = () => {
             <h1>Hello from Countries: {countries.length}</h1>
             <div className='countries-container'>
                 {
-                    countries.map(country => <Country country={country}></Country>)
+                    countries.map(country => <Country
+                        country={country}
+                        key={country.cca3}   //use key for improve the react applicaton perforamnce
+                    ></Country>)
                 }
             </div>
         </div>
