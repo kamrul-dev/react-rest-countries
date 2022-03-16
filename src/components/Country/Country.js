@@ -7,6 +7,7 @@ const Country = (props) => {
         <div className='country'>
             <h2>Country Name: {props.name}</h2>
             <p>Population: {props.population}</p>
+            <p><small>Region: {props.region}</small></p>
             <p><small>Area: {props.area}</small></p>
         </div>
     );

@@ -20,6 +20,7 @@ const Countries = () => {
                     name={country.name.common}
                     area={country.area}
                     population={country.population}
+                    region = {country.region}
                 ></Country>)
             }
         </div>
